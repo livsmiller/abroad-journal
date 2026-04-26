@@ -131,6 +131,26 @@ function setup() {
   button.position(10, 10);
   button.mousePressed(goToPageOne);
   button.hide();
+
+  styleButton();
+}
+
+function styleButton() {
+  button.style("font-family", "Trebuchet MS, Verdana, sans-serif");
+  button.style("font-size", "18px");
+  button.style("font-weight", "bold");
+  button.style("text-transform", "uppercase");
+  button.style("letter-spacing", "1px");
+
+  button.style("color", "white");
+  button.style("background-color", "rgb(79,124,130)");
+
+  button.style("border", "none");
+  button.style("border-radius", "14px");
+  button.style("padding", "12px 20px");
+
+  button.style("box-shadow", "0 4px 10px rgba(0,0,0,0.2)");
+  button.style("cursor", "pointer");
 }
 
 function draw() {
@@ -182,7 +202,7 @@ function pageOne() {
 function drawPin(x, y, label) {
   let pinX = mapX + x * mapScale;
   let pinY = mapY + y * mapScale;
-  let size = 13 * mapScale;
+  let size = 12 * mapScale;
 
   let hovering =
     mouseX > pinX - size / 2 &&
@@ -198,18 +218,19 @@ function drawPin(x, y, label) {
     textAlign(CENTER, CENTER);
     textSize(10 * mapScale);
     textStyle(BOLD);
+    textFont("Trebuchet MS");
 
     label = label.toUpperCase();
 
-    let boxWidth = textWidth(label) + 18 * mapScale;
+    let boxWidth = textWidth(label) + 40 * mapScale;
 
     fill(79, 124, 130);
     noStroke();
     rectMode(CENTER);
-    rect(pinX, pinY - 30 * mapScale, boxWidth, 23 * mapScale, 8 * mapScale);
+    rect(pinX, pinY - 34 * mapScale, boxWidth, 38 * mapScale, 14 * mapScale);
 
     fill(255);
-    text(label, pinX, pinY - 30 * mapScale);
+    text(label, pinX, pinY - 34 * mapScale);
   } else {
     image(pin, pinX, pinY, size, size);
   }
