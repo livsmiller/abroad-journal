@@ -105,7 +105,6 @@ function preload() {
   barcelonaPhotos[3] = loadImage('barcelona4.png');
   barcelonaPhotos[4] = loadImage('barcelona5.png');
 
-
   madridPhotos[0] = loadImage('madrid1.png');
   madridPhotos[1] = loadImage('madrid2.png');
   madridPhotos[2] = loadImage('madrid3.png');
